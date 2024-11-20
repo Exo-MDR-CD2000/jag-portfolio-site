@@ -27,8 +27,17 @@ const router = createBrowserRouter([
     element: <Layout />,
     // errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <Navigate to="/home" /> },
-      { path: 'home', element: <HomePage /> },
+      { index: true, element: <Navigate to="/home" />,
+        handle: {
+          ariaLabel: 'Navigate to Home Page',
+        }
+       },
+      { path: 'home', element: <HomePage />,
+        // add meta data for accessibility
+        handle: {
+          crumb: 'Home',
+        }
+       },
       // { path: 'about', element: <About /> },
       // { path: 'contact', element: <Contact /> },
       // { path: 'blog', element: <Blog /> },
