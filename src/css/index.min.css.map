@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"index.min.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/index.scss"],"names":[],"mappings":"AAOA,iBACE,eACA,MACA,OACA,WACA,YACA,aACA,gBACA","file":"index.min.css"}

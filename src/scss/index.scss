@@ -4,3 +4,15 @@
 }
 
 // Rest of your styles
+
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 20px;
+  background: #fff;
+  z-index: 9999;
+}
+
