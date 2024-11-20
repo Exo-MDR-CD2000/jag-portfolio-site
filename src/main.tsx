@@ -18,6 +18,7 @@ import './css/index.min.css';
 
 import Layout from './Layout.tsx';
 import HomePage from './pages/HomePage.tsx';
+import ErrorPage from './pages/ErrorPage.tsx';
 
 // create browser router
 
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Navigate to="/home" />,
         handle: {
@@ -41,7 +42,7 @@ const router = createBrowserRouter([
       // { path: 'about', element: <About /> },
       // { path: 'contact', element: <Contact /> },
       // { path: 'blog', element: <Blog /> },
-      // { path: '*', element: <ErrorPage /> },
+      { path: '*', element: <ErrorPage /> },
     ],
   },
 ]);
