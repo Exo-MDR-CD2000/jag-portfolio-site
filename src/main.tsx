@@ -11,7 +11,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min'; // Import Bootstrap JS
 
 
 // import css styles
-import './css/index.css'
+import 'normalize.css'; // might not use this because of bootstrap
+import './css/index.min.css';
 
 // import pages and layout
 
