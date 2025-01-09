@@ -6,7 +6,7 @@ const HomePage: React.FC = () => {
   return (
     <>
     <PageTitle title="Jose | Home" />
-    <div>
+    <div className="container">
       <h1>Home Page</h1>
         <p>Is this working?</p>
     </div>
