@@ -32,18 +32,21 @@ const Navbar: React.FC = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/about">About</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/contact">Contact</Link>
+                        </li>
                     </ul>
 
                     {/* Right-aligned social links */}
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                            <a className="nav-link" href="https://github.com/Exo-MDR-CD2000" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-github" aria-hidden="true"></i>
                                 <span className="visually-hidden">GitHub</span>
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                            <a className="nav-link" href="https://www.linkedin.com/in/jag1997/" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-linkedin" aria-hidden="true"></i>
                                 <span className="visually-hidden">LinkedIn</span>
                             </a>
