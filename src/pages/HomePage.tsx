@@ -22,8 +22,8 @@ const HomePage: React.FC = () => {
         <div className="row mb-5">
           <div className="col-lg-10 mx-auto">
             <p className="text-muted">
-              Hello! I am a dedicated Full-stack Web Developer with a strong passion for Front-End building. 
-              I continuously advance my understanding in this ever-progressing field. 
+              Hello! I am a dedicated Full-stack Web Developer with a strong passion for Front-End building.
+              I continuously advance my understanding in this ever-progressing field.
               Operating in the MST time zone, I ensure 6-8 hours of overlapping availability daily.
             </p>
           </div>
@@ -33,15 +33,21 @@ const HomePage: React.FC = () => {
         <div className="row mb-5">
           <div className="col-lg-8">
             <h2 className="h3 mb-4">Latest Writing</h2>
-            <div className="card border-0 shadow-sm">
+            <div className="card border-0 shadow-sm mb-4">
               <div className="card-body">
-                <h3 className="h5">2025</h3>
-                <p className="mb-2">
-                  <Link to="/blog/2025/01/01" className="text-decoration-none">
-                    January 1st - Goals for the Year
-                  </Link>
-                </p>
+                <small className="text-muted d-block mb-1">January 1st, 2025</small>
+                <Link
+                  to="/blog/goals-for-the-new-year"
+                  className="h5 text-decoration-none text-dark"
+                >
+                  Goals for the Year
+                </Link>
               </div>
+            </div>
+            <div className="">
+              <Link to="/blog" className="btn btn-primary px-4">
+                View All Posts
+              </Link>
             </div>
           </div>
         </div>
@@ -75,14 +81,13 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* View All Projects Button */}
-        <div className="row">
-          <div className="col-12 text-center">
-            <Link to="/projects" className="btn btn-primary px-4">
-              View All Projects
-            </Link>
+          {/* View All Projects Button */}
+          <div className="row">
+            <div className="col-12">
+              <Link to="/projects" className="btn btn-primary px-4">
+                View All Projects
+              </Link>
+            </div>
           </div>
         </div>
       </div>
