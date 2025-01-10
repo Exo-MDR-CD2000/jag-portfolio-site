@@ -8,9 +8,9 @@ const Navbar: React.FC = () => {
                 {/* Brand with profile picture */}
                 <Link className="navbar-brand" to="/">
                     <img 
-                        src="/path-to-your-profile-pic.jpg" 
+                        src="/src/assets/new-exotic-bird-compressed.webp" 
                         alt="Profile" 
-                        className="rounded-circle"
+                        className="rounded"
                         width="40" 
                         height="40" 
                     />

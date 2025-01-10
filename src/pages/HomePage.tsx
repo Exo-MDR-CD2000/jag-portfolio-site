@@ -7,7 +7,7 @@ const HomePage: React.FC = () => {
     <>
     <PageTitle title="Jose | Home" />
     <div className="container">
-      <h1>Home Page</h1>
+      <h1>Jose Guillen</h1>
         <p>Is this working?</p>
     </div>
     </>
