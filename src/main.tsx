@@ -39,10 +39,10 @@ const router = createBrowserRouter([
           crumb: 'Home',
         }
        },
-      // { path: 'about', element: <About /> },
-      // { path: 'projects', element: <Projects /> },
-      // { path: 'contact', element: <Contact /> },
       // { path: 'blog', element: <Blog /> },
+      // { path: 'projects', element: <Projects /> },
+      // { path: 'about', element: <About /> },
+      // { path: 'contact', element: <Contact /> },
       { path: '*', element: <ErrorPage /> },
     ],
   },
