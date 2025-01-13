@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
 import { ProjectsData } from "../model/projects";
 import projectsDB from "../db/projects.json";
+import SimpleProjectCard from "../components/SimpleProjectCard";
 
 const HomePage: React.FC = () => {
   const { projects } = projectsDB as ProjectsData;
   const featuredProjects = projects.slice(0, 2); // gets the first two projects only
-  
+
   return (
     <>
       <PageTitle title="Jose | Home" />
@@ -60,24 +61,24 @@ const HomePage: React.FC = () => {
 
         {/* Projects Section */}
         {/* Create new component that will render a project card dedicated to the home page. it will only contain the image, title and description */}
-      <div className="row mb-4">
-        <div className="col-12">
-          <h2 className="h3 mb-4">Featured Projects</h2>
-        </div>
-        {featuredProjects.map((project) => (
-          <div key={project.id} className="col-md-6 mb-4">
-            <ProjectCard project={project} />
-          </div>
-        ))}
-        {/* View All Projects Button */}
-        <div className="row">
+        <div className="row mb-4">
           <div className="col-12">
-            <Link to="/projects" className="btn btn-primary px-4">
-              View All Projects
-            </Link>
+            <h2 className="h3 mb-4">Featured Projects</h2>
+          </div>
+          {featuredProjects.map((project) => (
+            <div key={project.id} className="col-md-6 mb-4">
+              <SimpleProjectCard project={project} />
+            </div>
+          ))}
+          {/* View All Projects Button */}
+          <div className="row">
+            <div className="col-12">
+              <Link to="/projects" className="btn btn-primary px-4">
+                View All Projects
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </>
   );
