@@ -5,7 +5,7 @@
       "title": "Personal Portfolio",
       "description": "A simple portfolio website built with React and TypeScript showcasing my projects and blog posts.",
       "techStack": ["HTML", "CSS", "SCSS", "Bootstrap", "React", "TypeScript", "Bootstrap", "React Router", "NodeJS"],
-      "imageUrl": "/src/assets/projects/portfolio-preview.webp",
+      "imageUrl": "https://placehold.co/600x400",
       "githubUrl": "https://github.com/Exo-MDR-CD2000/jag-portfolio-site",
       "demoUrl": "WIP",
       "completedDate": "2025-01"
@@ -15,7 +15,7 @@
       "title": "Recipe CRUD Application",
       "description": "Implemented an online API via MockAPI into a simple cooking recipe site using React and Typescript. Contains 3 pages, over 10 components, and allows for all CRUD operations.",
       "techStack": ["HTML", "CSS", "SCSS", "Bootstrap", "React", "TypeScript", "Bootstrap", "React Router", "NodeJS"],
-      "imageUrl": "/src/assets/projects/weather-dashboard.webp",
+      "imageUrl": "https://placehold.co/600x400",
       "githubUrl": "https://github.com/Exo-MDR-CD2000/multi-react-project",
       "demoUrl": "https://recipe-manager-project.netlify.app/",
       "completedDate": "2024-11"
@@ -25,7 +25,7 @@
       "title": "Film Porfolio Website",
       "description": "Created a personal film portfolio site for a client. I am the current maintainer of the site and has been deployed to Netlify. Uses several React components and a universal layout for future content on the site.",
       "techStack": ["HTML", "CSS", "SCSS", "Bootstrap", "React", "TypeScript", "Bootstrap", "React Router", "NodeJS", "Netlify"],
-      "imageUrl": "/src/assets/projects/task-manager.webp",
+      "imageUrl": "https://placehold.co/600x400",
       "githubUrl": "https://github.com/Exo-MDR-CD2000/react-jake-portfolio",
       "demoUrl": "https://jakobguillenportfolio.netlify.app/home",
       "completedDate": "2024-11"

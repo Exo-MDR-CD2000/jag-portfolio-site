@@ -11,6 +11,7 @@ export interface Project {
     completedDate?: string;
 }
 
+// Wrapper interface for projects data which means an array of projects
 export interface ProjectsData {
     projects: Project[];
 }
