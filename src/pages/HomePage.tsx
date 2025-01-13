@@ -1,8 +1,14 @@
 import React from "react";
 import PageTitle from "../components/PageTitle";
 import { Link } from "react-router-dom";
+import ProjectCard from "../components/ProjectCard";
+import { ProjectsData } from "../model/projects";
+import projectsDB from "../db/projects.json";
 
 const HomePage: React.FC = () => {
+  const { projects } = projectsDB as ProjectsData;
+  const featuredProjects = projects.slice(0, 2); // gets the first two projects only
+  
   return (
     <>
       <PageTitle title="Jose | Home" />
@@ -53,43 +59,25 @@ const HomePage: React.FC = () => {
         </div>
 
         {/* Projects Section */}
-        <div className="row mb-4">
+        {/* Create new component that will render a project card dedicated to the home page. it will only contain the image, title and description */}
+      <div className="row mb-4">
+        <div className="col-12">
+          <h2 className="h3 mb-4">Featured Projects</h2>
+        </div>
+        {featuredProjects.map((project) => (
+          <div key={project.id} className="col-md-6 mb-4">
+            <ProjectCard project={project} />
+          </div>
+        ))}
+        {/* View All Projects Button */}
+        <div className="row">
           <div className="col-12">
-            <h2 className="h3 mb-4">Featured Projects</h2>
-          </div>
-          <div className="col-md-6 mb-4">
-            <div className="card h-100 border-0 shadow-sm">
-              <img src="..." className="card-img-top" alt="Project 1" />
-              <div className="card-body">
-                <h5 className="card-title">Project 1</h5>
-                <p className="card-text text-muted">Project details here</p>
-                <Link to="/projects/project-1" className="btn btn-outline-primary">
-                  Learn More
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6 mb-4">
-            <div className="card h-100 border-0 shadow-sm">
-              <img src="..." className="card-img-top" alt="Project 2" />
-              <div className="card-body">
-                <h5 className="card-title">Project 2</h5>
-                <p className="card-text text-muted">Project details here</p>
-                <Link to="/projects/project-2" className="btn btn-outline-primary">
-                  Learn More
-                </Link>
-              </div>
-            </div>
-          </div>
-          {/* View All Projects Button */}
-          <div className="row">
-            <div className="col-12">
-              <Link to="/projects" className="btn btn-primary px-4">
-                View All Projects
-              </Link>
-            </div>
+            <Link to="/projects" className="btn btn-primary px-4">
+              View All Projects
+            </Link>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
