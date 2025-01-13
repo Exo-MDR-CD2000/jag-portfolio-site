@@ -18,6 +18,7 @@ import './css/index.min.css';
 
 import Layout from './Layout.tsx';
 import HomePage from './pages/HomePage.tsx';
+import ProjectsPage from './pages/ProjectsPage.tsx';
 import ErrorPage from './pages/ErrorPage.tsx';
 
 // create browser router
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
         }
        },
       // { path: 'blog', element: <Blog /> },
-      // { path: 'projects', element: <Projects /> },
+      { path: 'projects', element: <ProjectsPage /> },
       // { path: 'about', element: <About /> },
       // { path: 'contact', element: <Contact /> },
       { path: '*', element: <ErrorPage /> },
