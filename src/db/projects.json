@@ -1,34 +1,132 @@
 {
-  "projects": [
+  "categories": [
     {
       "id": 1,
-      "title": "Personal Portfolio",
-      "description": "A simple portfolio website built with React and TypeScript showcasing my projects and blog posts.",
-      "techStack": ["HTML", "CSS", "SCSS", "Bootstrap", "React", "TypeScript", "Bootstrap", "React Router", "NodeJS"],
-      "imageUrl": "https://placehold.co/600x400",
-      "githubUrl": "https://github.com/Exo-MDR-CD2000/jag-portfolio-site",
-      "demoUrl": "WIP",
-      "completedDate": "2025-01"
+      "name": "Cars",
+      "description": "Automotive photography capturing the beauty and power of vehicles",
+      "coverImageUrl": "https://placehold.co/800x600/3498db/ffffff?text=Cars",
+      "slug": "cars",
+      "photoCount": 12,
+      "photos": [
+        {
+          "id": 101,
+          "title": "Classic Muscle",
+          "description": "1969 Dodge Charger at sunset",
+          "imageUrl": "https://placehold.co/1200x800/e74c3c/ffffff?text=Classic+Car",
+          "thumbnailUrl": "https://placehold.co/400x300/e74c3c/ffffff?text=Classic+Car",
+          "captureDate": "2024-08-15",
+          "camera": "Canon EOS R5",
+          "lens": "Canon RF 24-70mm f/2.8L",
+          "settings": {
+            "aperture": "f/5.6",
+            "shutterSpeed": "1/250s",
+            "iso": 200,
+            "focalLength": "50mm"
+          },
+          "location": "Los Angeles, CA",
+          "tags": ["classic", "muscle car", "sunset"]
+        }
+      ]
     },
     {
       "id": 2,
-      "title": "Recipe CRUD Application",
-      "description": "Implemented an online API via MockAPI into a simple cooking recipe site using React and Typescript. Contains 3 pages, over 10 components, and allows for all CRUD operations.",
-      "techStack": ["HTML", "CSS", "SCSS", "Bootstrap", "React", "TypeScript", "Bootstrap", "React Router", "NodeJS"],
-      "imageUrl": "https://placehold.co/600x400",
-      "githubUrl": "https://github.com/Exo-MDR-CD2000/multi-react-project",
-      "demoUrl": "https://recipe-manager-project.netlify.app/",
-      "completedDate": "2024-11"
+      "name": "Wildlife",
+      "description": "Nature and wildlife photography from around the world",
+      "coverImageUrl": "https://placehold.co/800x600/27ae60/ffffff?text=Wildlife",
+      "slug": "wildlife",
+      "photoCount": 25,
+      "photos": [
+        {
+          "id": 201,
+          "title": "Majestic Eagle",
+          "description": "Bald eagle soaring through the mountains",
+          "imageUrl": "https://placehold.co/1200x800/2ecc71/ffffff?text=Eagle",
+          "thumbnailUrl": "https://placehold.co/400x300/2ecc71/ffffff?text=Eagle",
+          "captureDate": "2024-07-22",
+          "camera": "Canon EOS R6",
+          "lens": "Canon RF 100-500mm f/4.5-7.1L",
+          "settings": {
+            "aperture": "f/6.3",
+            "shutterSpeed": "1/1000s",
+            "iso": 800,
+            "focalLength": "400mm"
+          },
+          "location": "Yellowstone National Park",
+          "tags": ["bird", "eagle", "flight", "mountains"]
+        }
+      ]
     },
     {
       "id": 3,
-      "title": "Film Porfolio Website",
-      "description": "Created a personal film portfolio site for a client. I am the current maintainer of the site and has been deployed to Netlify. Uses several React components and a universal layout for future content on the site.",
-      "techStack": ["HTML", "CSS", "SCSS", "Bootstrap", "React", "TypeScript", "Bootstrap", "React Router", "NodeJS", "Netlify"],
-      "imageUrl": "https://placehold.co/600x400",
-      "githubUrl": "https://github.com/Exo-MDR-CD2000/react-jake-portfolio",
-      "demoUrl": "https://jakobguillenportfolio.netlify.app/home",
-      "completedDate": "2024-11"
+      "name": "Infrared",
+      "description": "Surreal infrared photography revealing hidden landscapes",
+      "coverImageUrl": "https://placehold.co/800x600/9b59b6/ffffff?text=Infrared",
+      "slug": "infrared",
+      "photoCount": 18,
+      "photos": [
+        {
+          "id": 301,
+          "title": "Ethereal Forest",
+          "description": "Infrared capture of woodland in false color",
+          "imageUrl": "https://placehold.co/1200x800/8e44ad/ffffff?text=IR+Forest",
+          "thumbnailUrl": "https://placehold.co/400x300/8e44ad/ffffff?text=IR+Forest",
+          "captureDate": "2024-06-10",
+          "camera": "Modified Canon EOS 5D Mark III",
+          "lens": "Canon EF 16-35mm f/2.8L",
+          "settings": {
+            "aperture": "f/8.0",
+            "shutterSpeed": "1/125s",
+            "iso": 100,
+            "focalLength": "24mm"
+          },
+          "location": "Pacific Northwest",
+          "tags": ["infrared", "forest", "surreal", "false color"]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Motion",
+      "description": "Dynamic photography capturing movement and energy",
+      "coverImageUrl": "https://placehold.co/800x600/f39c12/ffffff?text=Motion",
+      "slug": "motion",
+      "photoCount": 15,
+      "photos": [
+        {
+          "id": 401,
+          "title": "Urban Rush",
+          "description": "Light trails through city streets at night",
+          "imageUrl": "https://placehold.co/1200x800/e67e22/ffffff?text=Light+Trails",
+          "thumbnailUrl": "https://placehold.co/400x300/e67e22/ffffff?text=Light+Trails",
+          "captureDate": "2024-09-05",
+          "camera": "Canon EOS R",
+          "lens": "Canon RF 24-105mm f/4L",
+          "settings": {
+            "aperture": "f/11",
+            "shutterSpeed": "30s",
+            "iso": 100,
+            "focalLength": "35mm"
+          },
+          "location": "Downtown Seattle",
+          "tags": ["long exposure", "night", "city", "light trails"]
+        }
+      ]
+    }
+  ],
+  "featuredPhotos": [
+    {
+      "id": 101,
+      "title": "Classic Muscle",
+      "description": "1969 Dodge Charger at sunset",
+      "imageUrl": "https://placehold.co/1200x800/e74c3c/ffffff?text=Classic+Car",
+      "thumbnailUrl": "https://placehold.co/400x300/e74c3c/ffffff?text=Classic+Car"
+    },
+    {
+      "id": 201,
+      "title": "Majestic Eagle",
+      "description": "Bald eagle soaring through the mountains",
+      "imageUrl": "https://placehold.co/1200x800/2ecc71/ffffff?text=Eagle",
+      "thumbnailUrl": "https://placehold.co/400x300/2ecc71/ffffff?text=Eagle"
     }
   ]
 }

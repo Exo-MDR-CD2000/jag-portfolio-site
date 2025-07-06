@@ -24,10 +24,10 @@ const Navbar: React.FC = () => {
                     {/* Left-aligned main navigation */}
                     <ul className="navbar-nav me-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/blog">Blog</Link>
+                            <Link className="nav-link" to="/home">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/projects">Projects</Link>
+                            <Link className="nav-link" to="/gallery">Galleries</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/about">About</Link>
@@ -40,9 +40,15 @@ const Navbar: React.FC = () => {
                     {/* Right-aligned social links */}
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link" href="https://github.com/Exo-MDR-CD2000" target="_blank" rel="noopener noreferrer">
-                                <i className="fab fa-github" aria-hidden="true"></i>
-                                <span className="visually-hidden">GitHub</span>
+                            <a className="nav-link" href="https://instagram.com/your_photography_handle" target="_blank" rel="noopener noreferrer">
+                                <i className="fab fa-instagram" aria-hidden="true"></i>
+                                <span className="visually-hidden">Instagram</span>
+                            </a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="https://flickr.com/photos/your_handle" target="_blank" rel="noopener noreferrer">
+                                <i className="fab fa-flickr" aria-hidden="true"></i>
+                                <span className="visually-hidden">Flickr</span>
                             </a>
                         </li>
                         <li className="nav-item">

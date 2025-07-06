@@ -1,80 +1,81 @@
 import React from "react";
 import PageTitle from "../components/PageTitle";
 import { Link } from "react-router-dom";
-import ProjectCard from "../components/ProjectCard";
-import { ProjectsData } from "../model/projects";
-import projectsDB from "../db/projects.json";
-import SimpleProjectCard from "../components/SimpleProjectCard";
+import CategoryCard from "../components/CategoryCard";
+import { PhotographyPortfolio } from "../model/projects";
+import photographyDB from "../db/photography.json";
 
 const HomePage: React.FC = () => {
-  const { projects } = projectsDB as ProjectsData;
-  const featuredProjects = projects.slice(0, 2); // gets the first two projects only
+  const { categories, featuredPhotos } = photographyDB as PhotographyPortfolio;
 
   return (
     <>
-      <PageTitle title="Jose | Home" />
+      <PageTitle title="Jose | Photography Portfolio" />
       <div className="container py-5">
         {/* Hero Section */}
         <div className="row mb-5">
           <div className="col-lg-8 mx-auto text-center">
             <h1 className="display-4 mb-3">Jose Guillen</h1>
             <p className="lead text-muted">
-              Full-stack Web Developer with a passion for Front-End development.
-              2+ years of experience building modern web applications.
+              Photographer capturing life through different lenses.
+              Specializing in automotive, wildlife, infrared, and motion photography.
             </p>
           </div>
         </div>
 
-        {/* About Section */}
+        {/* About Photography Section */}
         <div className="row mb-5">
           <div className="col-lg-10 mx-auto">
             <p className="text-muted">
-              Hello! I am a dedicated Full-stack Web Developer with a strong passion for Front-End building.
-              I continuously advance my understanding in this ever-progressing field.
-              Operating in the MST time zone, I ensure 6-8 hours of overlapping availability daily.
+              Welcome to my photography portfolio! I'm passionate about capturing the world 
+              through different perspectives and techniques. From the raw power of automotive 
+              beauty to the serene wilderness of nature, each photograph tells a unique story.
+              Explore my work across various categories and discover the moments that inspire me.
             </p>
           </div>
         </div>
 
-        {/* Writing Section */}
-        <div className="row mb-5">
-          <div className="col-lg-8">
-            <h2 className="h3 mb-4">Latest Writing</h2>
-            <div className="card border-0 shadow-sm mb-4">
-              <div className="card-body">
-                <small className="text-muted d-block mb-1">January 1st, 2025</small>
-                <Link
-                  to="/blog/goals-for-the-new-year"
-                  className="h5 text-decoration-none text-dark"
-                >
-                  Goals for the Year
-                </Link>
+        {/* Featured Photos Section */}
+        {featuredPhotos && featuredPhotos.length > 0 && (
+          <div className="row mb-5">
+            <div className="col-12">
+              <h2 className="h3 mb-4">Featured Work</h2>
+            </div>
+            {featuredPhotos.map((photo) => (
+              <div key={photo.id} className="col-md-6 mb-4">
+                <div className="card border-0 shadow-sm h-100">
+                  <img 
+                    src={photo.imageUrl} 
+                    alt={photo.title}
+                    className="card-img-top"
+                    style={{ height: '300px', objectFit: 'cover' }}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{photo.title}</h5>
+                    <p className="card-text text-muted">{photo.description}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="">
-              <Link to="/blog" className="btn btn-primary px-4">
-                View All Posts
-              </Link>
-            </div>
+            ))}
           </div>
-        </div>
+        )}
 
-        {/* Projects Section */}
-        {/* Create new component that will render a project card dedicated to the home page. it will only contain the image, title and description */}
+        {/* Photo Categories Section */}
         <div className="row mb-4">
           <div className="col-12">
-            <h2 className="h3 mb-4">Featured Projects</h2>
+            <h2 className="h3 mb-4">Photography Categories</h2>
           </div>
-          {featuredProjects.map((project) => (
-            <div key={project.id} className="col-md-6 mb-4">
-              <SimpleProjectCard project={project} />
+          {categories.map((category) => (
+            <div key={category.id} className="col-md-6 col-lg-3 mb-4">
+              <CategoryCard category={category} />
             </div>
           ))}
-          {/* View All Projects Button */}
-          <div className="row">
-            <div className="col-12">
-              <Link to="/projects" className="btn btn-primary px-4">
-                View All Projects
+          
+          {/* View All Galleries Button */}
+          <div className="row mt-4">
+            <div className="col-12 text-center">
+              <Link to="/gallery" className="btn btn-primary px-4">
+                View All Galleries
               </Link>
             </div>
           </div>

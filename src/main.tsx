@@ -40,8 +40,8 @@ const router = createBrowserRouter([
           crumb: 'Home',
         }
        },
-      // { path: 'blog', element: <Blog /> },
-      { path: 'projects', element: <ProjectsPage /> },
+      { path: 'gallery', element: <ProjectsPage /> }, // Repurpose as gallery overview
+      { path: 'gallery/:category', element: <ProjectsPage /> }, // Individual category galleries
       // { path: 'about', element: <About /> },
       // { path: 'contact', element: <Contact /> },
       { path: '*', element: <ErrorPage /> },

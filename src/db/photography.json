@@ -1,0 +1,394 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Cars",
+      "description": "Automotive photography capturing the beauty and power of vehicles",
+      "coverImageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop",
+      "slug": "cars",
+      "photoCount": 12,
+      "photos": [
+        {
+          "id": 101,
+          "title": "Classic Muscle",
+          "description": "1969 Dodge Charger at sunset",
+          "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=300&fit=crop",
+          "captureDate": "2024-08-15",
+          "camera": "Canon EOS R5",
+          "lens": "Canon RF 24-70mm f/2.8L",
+          "settings": {
+            "aperture": "f/5.6",
+            "shutterSpeed": "1/250s",
+            "iso": 200,
+            "focalLength": "50mm"
+          },
+          "location": "Los Angeles, CA",
+          "tags": ["classic", "muscle car", "sunset"]
+        },
+        {
+          "id": 102,
+          "title": "Modern Supercar",
+          "description": "McLaren 720S in urban setting",
+          "imageUrl": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=300&fit=crop",
+          "captureDate": "2024-07-10",
+          "camera": "Canon EOS R5",
+          "lens": "Canon RF 85mm f/1.2L",
+          "location": "Miami, FL",
+          "tags": ["supercar", "modern", "urban"]
+        },
+        {
+          "id": 103,
+          "title": "Vintage Porsche",
+          "description": "Classic 911 on mountain roads",
+          "imageUrl": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=300&fit=crop",
+          "captureDate": "2024-06-22",
+          "camera": "Canon EOS R6",
+          "lens": "Canon RF 24-105mm f/4L",
+          "location": "Colorado Rockies",
+          "tags": ["vintage", "porsche", "mountains"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Wildlife",
+      "description": "Nature and wildlife photography from around the world",
+      "coverImageUrl": "https://images.unsplash.com/photo-1551522435-a13afa10f103?w=800&h=600&fit=crop",
+      "slug": "wildlife",
+      "photoCount": 25,
+      "photos": [
+        {
+          "id": 201,
+          "title": "Majestic Eagle",
+          "description": "Bald eagle soaring through the mountains",
+          "imageUrl": "https://images.unsplash.com/photo-1551522435-a13afa10f103?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1551522435-a13afa10f103?w=400&h=300&fit=crop",
+          "captureDate": "2024-07-22",
+          "camera": "Canon EOS R6",
+          "lens": "Canon RF 100-500mm f/4.5-7.1L",
+          "settings": {
+            "aperture": "f/6.3",
+            "shutterSpeed": "1/1000s",
+            "iso": 800,
+            "focalLength": "400mm"
+          },
+          "location": "Yellowstone National Park",
+          "tags": ["bird", "eagle", "flight", "mountains"]
+        },
+        {
+          "id": 202,
+          "title": "Mountain Wolf",
+          "description": "Grey wolf in natural habitat",
+          "imageUrl": "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=400&h=300&fit=crop",
+          "captureDate": "2024-06-15",
+          "camera": "Canon EOS R6",
+          "lens": "Canon RF 100-500mm f/4.5-7.1L",
+          "location": "Glacier National Park",
+          "tags": ["wolf", "predator", "wildlife"]
+        },
+        {
+          "id": 203,
+          "title": "Colorful Toucan",
+          "description": "Tropical toucan in rainforest canopy",
+          "imageUrl": "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=400&h=300&fit=crop",
+          "captureDate": "2024-05-08",
+          "camera": "Canon EOS R5",
+          "lens": "Canon RF 100-500mm f/4.5-7.1L",
+          "location": "Costa Rica",
+          "tags": ["bird", "tropical", "colorful", "rainforest"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Infrared",
+      "description": "Surreal infrared photography revealing hidden landscapes",
+      "coverImageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop",
+      "slug": "infrared",
+      "photoCount": 18,
+      "photos": [
+        {
+          "id": 301,
+          "title": "Ethereal Forest",
+          "description": "Infrared capture of woodland in false color",
+          "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop",
+          "captureDate": "2024-06-10",
+          "camera": "Modified Canon EOS 5D Mark III",
+          "lens": "Canon EF 16-35mm f/2.8L",
+          "settings": {
+            "aperture": "f/8.0",
+            "shutterSpeed": "1/125s",
+            "iso": 100,
+            "focalLength": "24mm"
+          },
+          "location": "Pacific Northwest",
+          "tags": ["infrared", "forest", "surreal", "false color"]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Motion",
+      "description": "Dynamic photography capturing movement and energy",
+      "coverImageUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop",
+      "slug": "motion",
+      "photoCount": 15,
+      "photos": [
+        {
+          "id": 401,
+          "title": "Urban Rush",
+          "description": "Light trails through city streets at night",
+          "imageUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop",
+          "captureDate": "2024-09-05",
+          "camera": "Canon EOS R",
+          "lens": "Canon RF 24-105mm f/4L",
+          "settings": {
+            "aperture": "f/11",
+            "shutterSpeed": "30s",
+            "iso": 100,
+            "focalLength": "35mm"
+          },
+          "location": "Downtown Seattle",
+          "tags": ["long exposure", "night", "city", "light trails"]
+        },
+        {
+          "id": 402,
+          "title": "Flowing Water",
+          "description": "Waterfall captured with motion blur technique",
+          "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
+          "captureDate": "2024-08-12",
+          "camera": "Canon EOS R6",
+          "lens": "Canon RF 24-70mm f/2.8L",
+          "settings": {
+            "aperture": "f/16",
+            "shutterSpeed": "2s",
+            "iso": 50,
+            "focalLength": "35mm"
+          },
+          "location": "Olympic National Park",
+          "tags": ["waterfall", "motion blur", "nature", "long exposure"]
+        },
+        {
+          "id": 403,
+          "title": "Dancing Flames",
+          "description": "Fire in motion with artistic blur",
+          "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
+          "captureDate": "2024-07-28",
+          "camera": "Canon EOS R5",
+          "lens": "Canon RF 85mm f/1.2L",
+          "settings": {
+            "aperture": "f/4.0",
+            "shutterSpeed": "1/15s",
+            "iso": 400,
+            "focalLength": "85mm"
+          },
+          "location": "Campfire Session",
+          "tags": ["fire", "motion", "abstract", "warmth"]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Film",
+      "description": "Analog film photography with timeless aesthetic and grain",
+      "coverImageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=600&fit=crop",
+      "slug": "film",
+      "photoCount": 22,
+      "photos": [
+        {
+          "id": 501,
+          "title": "Golden Hour Portrait",
+          "description": "35mm film portrait during magic hour",
+          "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&h=300&fit=crop",
+          "captureDate": "2024-05-20",
+          "camera": "Canon AE-1",
+          "lens": "Canon FD 50mm f/1.4",
+          "settings": {
+            "aperture": "f/2.8",
+            "shutterSpeed": "1/125s",
+            "iso": 400,
+            "focalLength": "50mm"
+          },
+          "location": "Downtown Park",
+          "tags": ["film", "portrait", "golden hour", "35mm"]
+        },
+        {
+          "id": 502,
+          "title": "Vintage Street Scene",
+          "description": "Black and white film capture of urban life",
+          "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
+          "captureDate": "2024-04-15",
+          "camera": "Leica M6",
+          "lens": "Leica Summicron 35mm f/2",
+          "location": "NYC Streets",
+          "tags": ["film", "street", "black and white", "leica"]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Low Light",
+      "description": "Photography in challenging lighting conditions and after dark",
+      "coverImageUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&h=600&fit=crop",
+      "slug": "low-light",
+      "photoCount": 18,
+      "photos": [
+        {
+          "id": 601,
+          "title": "Neon Nights",
+          "description": "City neon reflections in wet streets",
+          "imageUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=300&fit=crop",
+          "captureDate": "2024-08-03",
+          "camera": "Sony A7S III",
+          "lens": "Sony FE 35mm f/1.4",
+          "settings": {
+            "aperture": "f/1.4",
+            "shutterSpeed": "1/60s",
+            "iso": 3200,
+            "focalLength": "35mm"
+          },
+          "location": "Tokyo, Japan",
+          "tags": ["low light", "neon", "night", "city"]
+        },
+        {
+          "id": 602,
+          "title": "Candlelit Atmosphere",
+          "description": "Intimate portrait by candlelight",
+          "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+          "captureDate": "2024-06-28",
+          "camera": "Canon EOS R5",
+          "lens": "Canon RF 85mm f/1.2L",
+          "settings": {
+            "aperture": "f/1.2",
+            "shutterSpeed": "1/80s",
+            "iso": 1600,
+            "focalLength": "85mm"
+          },
+          "location": "Studio Setting",
+          "tags": ["low light", "portrait", "candlelight", "intimate"]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Street Photography",
+      "description": "Candid moments and urban life captured in the streets",
+      "coverImageUrl": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&h=600&fit=crop",
+      "slug": "street-photography",
+      "photoCount": 35,
+      "photos": [
+        {
+          "id": 701,
+          "title": "Urban Commute",
+          "description": "Rush hour energy at subway station",
+          "imageUrl": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&h=300&fit=crop",
+          "captureDate": "2024-07-18",
+          "camera": "Fujifilm X-T4",
+          "lens": "Fujifilm XF 23mm f/2",
+          "settings": {
+            "aperture": "f/5.6",
+            "shutterSpeed": "1/250s",
+            "iso": 800,
+            "focalLength": "23mm"
+          },
+          "location": "NYC Subway",
+          "tags": ["street", "urban", "commute", "candid"]
+        },
+        {
+          "id": 702,
+          "title": "Market Vendor",
+          "description": "Local vendor at farmers market",
+          "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
+          "captureDate": "2024-06-05",
+          "camera": "Canon EOS R6",
+          "lens": "Canon RF 50mm f/1.8",
+          "settings": {
+            "aperture": "f/2.8",
+            "shutterSpeed": "1/160s",
+            "iso": 400,
+            "focalLength": "50mm"
+          },
+          "location": "Pike Place Market",
+          "tags": ["street", "vendor", "market", "people"]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Portraits",
+      "description": "Character studies and human connections through portraiture",
+      "coverImageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
+      "slug": "portraits",
+      "photoCount": 28,
+      "photos": [
+        {
+          "id": 801,
+          "title": "Professional Headshot",
+          "description": "Corporate portrait with natural lighting",
+          "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+          "captureDate": "2024-08-22",
+          "camera": "Canon EOS R5",
+          "lens": "Canon RF 85mm f/1.2L",
+          "settings": {
+            "aperture": "f/2.8",
+            "shutterSpeed": "1/200s",
+            "iso": 200,
+            "focalLength": "85mm"
+          },
+          "location": "Studio",
+          "tags": ["portrait", "professional", "headshot", "studio"]
+        },
+        {
+          "id": 802,
+          "title": "Environmental Portrait",
+          "description": "Artist in their creative workspace",
+          "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&h=300&fit=crop",
+          "captureDate": "2024-07-12",
+          "camera": "Canon EOS R6",
+          "lens": "Canon RF 35mm f/1.8",
+          "settings": {
+            "aperture": "f/4.0",
+            "shutterSpeed": "1/125s",
+            "iso": 400,
+            "focalLength": "35mm"
+          },
+          "location": "Art Studio",
+          "tags": ["portrait", "environmental", "artist", "workspace"]
+        }
+      ]
+    }
+  ],
+  "featuredPhotos": [
+    {
+      "id": 101,
+      "title": "Classic Muscle",
+      "description": "1969 Dodge Charger at sunset",
+      "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&h=800&fit=crop",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 201,
+      "title": "Majestic Eagle",
+      "description": "Bald eagle soaring through the mountains",
+      "imageUrl": "https://images.unsplash.com/photo-1551522435-a13afa10f103?w=1200&h=800&fit=crop",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1551522435-a13afa10f103?w=400&h=300&fit=crop"
+    }
+  ]
+}
