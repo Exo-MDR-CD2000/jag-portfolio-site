@@ -46,6 +46,19 @@ const RotatingCollage: React.FC<RotatingCollageProps> = ({ photos }) => {
 
   const currentPhoto = displayedPhotos[currentPhotoIndex];
 
+  // Function to determine photo aspect ratio category
+  const getPhotoAspectClass = (imageUrl: string): string => {
+    // Extract width and height from URL parameters if available
+    const urlParams = new URLSearchParams(imageUrl.split('?')[1] || '');
+    const width = parseInt(urlParams.get('w') || '1200');
+    const height = parseInt(urlParams.get('h') || '800');
+    const aspectRatio = width / height;
+
+    if (aspectRatio > 2) return 'panoramic-photo';
+    if (aspectRatio < 0.8) return 'portrait-photo';
+    return 'landscape-photo';
+  };
+
   return (
     <div className="rotating-collage-container">
       {/* Main Hero Image */}
@@ -53,7 +66,7 @@ const RotatingCollage: React.FC<RotatingCollageProps> = ({ photos }) => {
         <img 
           src={currentPhoto.imageUrl} 
           alt={currentPhoto.title}
-          className="hero-image"
+          className={`hero-image ${getPhotoAspectClass(currentPhoto.imageUrl)}`}
         />
         <div className="image-overlay">
           <div className="image-info">
@@ -72,7 +85,7 @@ const RotatingCollage: React.FC<RotatingCollageProps> = ({ photos }) => {
             onClick={() => setCurrentPhotoIndex(index)}
           >
             <img 
-              src={photo.thumbnailUrl} 
+              src={photo.thumbnailUrl || photo.imageUrl} 
               alt={photo.title}
               className="thumbnail-image"
             />

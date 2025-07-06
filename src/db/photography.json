@@ -58,7 +58,7 @@
       "description": "Nature and wildlife photography from around the world",
       "coverImageUrl": "https://images.unsplash.com/photo-1551522435-a13afa10f103?w=800&h=600&fit=crop",
       "slug": "wildlife",
-      "photoCount": 25,
+      "photoCount": 26,
       "photos": [
         {
           "id": 201,
@@ -101,6 +101,24 @@
           "lens": "Canon RF 100-500mm f/4.5-7.1L",
           "location": "Costa Rica",
           "tags": ["bird", "tropical", "colorful", "rainforest"]
+        },
+        {
+          "id": 204,
+          "title": "Tall Tree Portrait",
+          "description": "Vertical composition of ancient redwood",
+          "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=1200&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=600&fit=crop",
+          "captureDate": "2024-09-22",
+          "camera": "Canon EOS R6",
+          "lens": "Canon RF 16-35mm f/2.8L",
+          "settings": {
+            "aperture": "f/8.0",
+            "shutterSpeed": "1/60s",
+            "iso": 400,
+            "focalLength": "16mm"
+          },
+          "location": "Redwood National Park",
+          "tags": ["tree", "vertical", "forest", "nature"]
         }
       ]
     },
@@ -334,7 +352,7 @@
       "description": "Character studies and human connections through portraiture",
       "coverImageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
       "slug": "portraits",
-      "photoCount": 28,
+      "photoCount": 33,
       "photos": [
         {
           "id": 801,
@@ -371,6 +389,142 @@
           },
           "location": "Art Studio",
           "tags": ["portrait", "environmental", "artist", "workspace"]
+        },
+        {
+          "id": 803,
+          "title": "Portrait in Natural Light",
+          "description": "Vertical portrait with window lighting",
+          "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=1200&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=600&fit=crop",
+          "captureDate": "2024-09-08",
+          "camera": "Canon EOS R5",
+          "lens": "Canon RF 85mm f/1.2L",
+          "settings": {
+            "aperture": "f/1.8",
+            "shutterSpeed": "1/160s",
+            "iso": 320,
+            "focalLength": "85mm"
+          },
+          "location": "Home Studio",
+          "tags": ["portrait", "vertical", "natural light", "female"]
+        },
+        {
+          "id": 804,
+          "title": "Senior Portrait",
+          "description": "Graduation portrait session",
+          "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1200&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop",
+          "captureDate": "2024-08-15",
+          "camera": "Canon EOS R6",
+          "lens": "Canon RF 50mm f/1.8",
+          "settings": {
+            "aperture": "f/2.5",
+            "shutterSpeed": "1/200s",
+            "iso": 250,
+            "focalLength": "50mm"
+          },
+          "location": "University Campus",
+          "tags": ["portrait", "vertical", "graduation", "senior"]
+        },
+        {
+          "id": 805,
+          "title": "Family Portrait",
+          "description": "Multi-generational family session",
+          "imageUrl": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1200&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&h=300&fit=crop",
+          "captureDate": "2024-07-20",
+          "camera": "Canon EOS R5",
+          "lens": "Canon RF 24-70mm f/2.8L",
+          "settings": {
+            "aperture": "f/5.6",
+            "shutterSpeed": "1/200s",
+            "iso": 200,
+            "focalLength": "35mm"
+          },
+          "location": "Local Park",
+          "tags": ["portrait", "family", "group", "outdoor"]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Panoramic",
+      "description": "Wide-angle panoramic landscapes and cityscapes",
+      "coverImageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=600&fit=crop",
+      "slug": "panoramic",
+      "photoCount": 15,
+      "photos": [
+        {
+          "id": 901,
+          "title": "Mountain Range Vista",
+          "description": "Panoramic view of the Rocky Mountains at sunrise",
+          "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2400&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=200&fit=crop",
+          "captureDate": "2024-08-05",
+          "camera": "Canon EOS R5",
+          "lens": "Canon RF 16-35mm f/2.8L",
+          "settings": {
+            "aperture": "f/11",
+            "shutterSpeed": "1/250s",
+            "iso": 100,
+            "focalLength": "16mm"
+          },
+          "location": "Rocky Mountain National Park",
+          "tags": ["panoramic", "mountains", "sunrise", "landscape"]
+        },
+        {
+          "id": 902,
+          "title": "City Skyline Panorama",
+          "description": "Downtown Seattle skyline at dusk",
+          "imageUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=2400&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=200&fit=crop",
+          "captureDate": "2024-09-12",
+          "camera": "Canon EOS R6",
+          "lens": "Canon RF 24-105mm f/4L",
+          "settings": {
+            "aperture": "f/8.0",
+            "shutterSpeed": "1/60s",
+            "iso": 800,
+            "focalLength": "35mm"
+          },
+          "location": "Kerry Park, Seattle",
+          "tags": ["panoramic", "cityscape", "dusk", "skyline"]
+        },
+        {
+          "id": 903,
+          "title": "Ocean Horizon",
+          "description": "Ultra-wide seascape with dramatic clouds",
+          "imageUrl": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=2400&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&h=200&fit=crop",
+          "captureDate": "2024-07-18",
+          "camera": "Canon EOS R5",
+          "lens": "Canon RF 16-35mm f/2.8L",
+          "settings": {
+            "aperture": "f/16",
+            "shutterSpeed": "1/125s",
+            "iso": 100,
+            "focalLength": "16mm"
+          },
+          "location": "Big Sur, California",
+          "tags": ["panoramic", "seascape", "clouds", "horizon"]
+        },
+        {
+          "id": 904,
+          "title": "Desert Landscape",
+          "description": "Sweeping panorama of red rock formations",
+          "imageUrl": "https://images.unsplash.com/photo-1682687982501-1e58ab814714?w=2400&h=800&fit=crop",
+          "thumbnailUrl": "https://images.unsplash.com/photo-1682687982501-1e58ab814714?w=600&h=200&fit=crop",
+          "captureDate": "2024-06-25",
+          "camera": "Canon EOS R6",
+          "lens": "Canon RF 16-35mm f/2.8L",
+          "settings": {
+            "aperture": "f/11",
+            "shutterSpeed": "1/200s",
+            "iso": 100,
+            "focalLength": "20mm"
+          },
+          "location": "Antelope Canyon, Arizona",
+          "tags": ["panoramic", "desert", "red rocks", "formations"]
         }
       ]
     }

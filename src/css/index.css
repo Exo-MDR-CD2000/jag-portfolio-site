@@ -96,6 +96,44 @@
   font-weight: 500;
   letter-spacing: 0.5px;
 }
+.photo-modal-enhanced .modal-body .col-lg-8 {
+  padding: 1.5rem !important;
+  touch-action: pan-x pan-y pinch-zoom;
+}
+.photo-modal-enhanced .modal-body .col-lg-8 img {
+  max-height: calc(70vh - 3rem) !important;
+  max-width: calc(100% - 3rem) !important;
+  margin: auto;
+  display: block;
+}
+.photo-modal-enhanced .modal-body .col-lg-8 img.panoramic-photo {
+  max-height: calc(50vh - 2rem) !important;
+}
+.photo-modal-enhanced .modal-body .col-lg-8 img.portrait-photo {
+  max-height: calc(80vh - 3rem) !important;
+}
+.photo-modal-enhanced .modal-body .col-lg-8 img.landscape-photo {
+  max-height: calc(70vh - 3rem) !important;
+}
+.photo-modal-enhanced .modal-body .hero-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  padding: 1rem;
+}
+.photo-modal-enhanced .modal-body .hero-image.panoramic-photo {
+  max-height: 50vh;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+.photo-modal-enhanced .modal-body .hero-image.portrait-photo {
+  max-height: 80vh;
+  width: auto;
+  padding: 1.5rem;
+}
+.photo-modal-enhanced .modal-body .hero-image.landscape-photo {
+  padding: 1.5rem;
+}
 
 .hover-lift {
   transition: transform 0.2s ease-in-out;
@@ -131,8 +169,30 @@
 .rotating-collage-container .hero-image-container .hero-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.5s ease, opacity 0.5s ease;
+  background-color: #f8f9fa;
+}
+.rotating-collage-container .hero-image-container .hero-image.panoramic-photo {
+  object-fit: cover;
+  object-position: center;
+  background-color: transparent;
+}
+.rotating-collage-container .hero-image-container .hero-image.portrait-photo {
+  object-fit: contain;
+  object-position: center;
+  background-color: white;
+}
+.rotating-collage-container .hero-image-container .hero-image.landscape-photo {
+  object-fit: contain;
+  object-position: center;
+  background-color: #f8f9fa;
+}
+@media (min-width: 1400px) {
+  .rotating-collage-container .hero-image-container .hero-image.landscape-photo {
+    object-fit: cover;
+    background-color: transparent;
+  }
 }
 .rotating-collage-container .hero-image-container .image-overlay {
   position: absolute;
@@ -167,6 +227,8 @@
   overflow: hidden;
   transition: all 0.3s ease;
   border: 3px solid transparent;
+  aspect-ratio: 3/2;
+  position: relative;
 }
 .rotating-collage-container .thumbnail-grid .thumbnail-item:hover {
   transform: translateY(-3px);
@@ -179,9 +241,14 @@
 }
 .rotating-collage-container .thumbnail-grid .thumbnail-item .thumbnail-image {
   width: 100%;
-  height: 80px;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  object-position: center;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .rotating-collage-container .thumbnail-grid .thumbnail-item:hover .thumbnail-image {
   transform: scale(1.1);
@@ -226,7 +293,113 @@
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 0.5rem;
   }
-  .rotating-collage-container .thumbnail-grid .thumbnail-item .thumbnail-image {
+  .rotating-collage-container .thumbnail-grid .thumbnail-item {
+    aspect-ratio: 3/2;
+  }
+}
+
+.photo-aspect-container {
+  position: relative;
+  overflow: hidden;
+}
+.photo-aspect-container.panoramic {
+  aspect-ratio: 3/1;
+}
+.photo-aspect-container.panoramic .photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.photo-aspect-container.portrait {
+  aspect-ratio: 3/4;
+}
+.photo-aspect-container.portrait .photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.photo-aspect-container.landscape {
+  aspect-ratio: 4/3;
+}
+.photo-aspect-container.landscape .photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.photo-aspect-container.square {
+  aspect-ratio: 1/1;
+}
+.photo-aspect-container.square .photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  .hero-image-container {
+    height: 50vh;
+    min-height: 350px;
+  }
+  .hero-image-container .image-overlay {
+    padding: 1.5rem;
+  }
+  .hero-image-container .image-overlay .image-info .image-title {
+    font-size: 1.4rem;
+  }
+  .hero-image-container .image-overlay .image-info .image-location {
+    font-size: 0.9rem;
+  }
+  .thumbnail-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 0.5rem;
+  }
+  .thumbnail-grid .thumbnail-item .thumbnail-image {
     height: 60px;
+  }
+}
+.photo-zoomable {
+  cursor: zoom-in;
+  transition: transform 0.3s ease, cursor 0.3s ease;
+  touch-action: pan-x pan-y pinch-zoom;
+}
+.photo-zoomable.zoomed {
+  cursor: zoom-out;
+  transform-origin: center center;
+  touch-action: pan-x pan-y pinch-zoom;
+}
+.photo-zoomable:hover:not(.zoomed) {
+  opacity: 0.9;
+}
+
+.overflow-auto::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.overflow-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+.overflow-auto::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+.overflow-auto::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+@media (max-width: 768px) {
+  .photo-zoomable.zoomed {
+    transform: scale(2.5) !important;
+  }
+  .photo-zoomable.zoomed.panoramic-photo {
+    transform: scale(4) !important;
+  }
+  .zoomed ~ .btn {
+    opacity: 0.3;
+    pointer-events: none;
   }
 }/*# sourceMappingURL=index.css.map */

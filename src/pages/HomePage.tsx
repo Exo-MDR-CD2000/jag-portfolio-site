@@ -19,14 +19,14 @@ const HomePage: React.FC = () => {
       <PageTitle title="Jose | Photography Portfolio" />
       <div className="container py-5">
         {/* Hero Section with Rotating Collage */}
-        <div className="row mb-5">
+        {/* <div className="row mb-5">
           <div className="col-lg-8 mx-auto text-center mb-4">
             <h1 className="display-4 mb-3">Jose Guillen</h1>
             <p className="lead text-muted">
               Photographer capturing life through different lenses.
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* Rotating Image Collage */}
         {allPhotos.length > 0 && (

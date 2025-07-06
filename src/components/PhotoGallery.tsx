@@ -11,30 +11,40 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos, categoryName }) => 
   const [showModal, setShowModal] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isZoomed, setIsZoomed] = useState(false);
 
   const handlePhotoClick = (photo: Photo) => {
     const index = photos.findIndex(p => p.id === photo.id);
     setCurrentIndex(index);
     setSelectedPhoto(photo);
     setShowModal(true);
+    setIsZoomed(false); // Reset zoom when opening new photo
   };
 
   const handleCloseModal = () => {
     setShowModal(false);
     setSelectedPhoto(null);
+    setIsZoomed(false); // Reset zoom when closing
   };
 
   const handlePrevious = useCallback(() => {
     const newIndex = currentIndex > 0 ? currentIndex - 1 : photos.length - 1;
     setCurrentIndex(newIndex);
     setSelectedPhoto(photos[newIndex]);
+    setIsZoomed(false); // Reset zoom when changing photos
   }, [currentIndex, photos]);
 
   const handleNext = useCallback(() => {
     const newIndex = currentIndex < photos.length - 1 ? currentIndex + 1 : 0;
     setCurrentIndex(newIndex);
     setSelectedPhoto(photos[newIndex]);
+    setIsZoomed(false); // Reset zoom when changing photos
   }, [currentIndex, photos]);
+
+  // Handle zoom toggle
+  const handleZoomToggle = () => {
+    setIsZoomed(!isZoomed);
+  };
 
   React.useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -48,6 +58,32 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos, categoryName }) => 
       return () => document.removeEventListener('keydown', handleKeyDown);
     }
   }, [showModal, handlePrevious, handleNext]);
+
+  // Function to determine photo aspect ratio for modal display
+  const getModalPhotoClass = (imageUrl: string): string => {
+    const urlParams = new URLSearchParams(imageUrl.split('?')[1] || '');
+    const width = parseInt(urlParams.get('w') || '1200');
+    const height = parseInt(urlParams.get('h') || '800');
+    const aspectRatio = width / height;
+
+    if (aspectRatio > 2) return 'panoramic-photo';
+    if (aspectRatio < 0.8) return 'portrait-photo';
+    return 'landscape-photo';
+  };
+
+  // Function to get appropriate zoom scale based on photo type and device
+  const getZoomScale = (imageUrl: string): number => {
+    const photoClass = getModalPhotoClass(imageUrl);
+    const isMobile = window.innerWidth <= 768;
+    
+    if (photoClass === 'panoramic-photo') {
+      return isMobile ? 4 : 3; // Higher zoom for panoramic on mobile
+    } else if (photoClass === 'portrait-photo') {
+      return isMobile ? 2.5 : 2; // Standard zoom for portraits
+    } else {
+      return isMobile ? 2.5 : 2; // Standard zoom for landscape
+    }
+  };
 
   return (
     <Container fluid className="py-4">
@@ -99,7 +135,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos, categoryName }) => 
         <Modal.Body className="p-0 bg-light">
           {selectedPhoto && (
             <Row className="g-0">
-              <Col lg={8} className="position-relative bg-white d-flex align-items-center justify-content-center" style={{ minHeight: '60vh' }}>
+              <Col lg={8} className={`position-relative bg-white d-flex align-items-center justify-content-center p-3 ${isZoomed ? 'overflow-auto' : ''}`} style={{ minHeight: '60vh' }}>
                 {/* Previous Arrow */}
                 <button
                   className="btn btn-light position-absolute start-0 top-50 translate-middle-y ms-3 rounded-circle"
@@ -114,8 +150,16 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos, categoryName }) => 
                 <Image
                   src={selectedPhoto.imageUrl}
                   alt={selectedPhoto.title}
-                  className="w-100 h-auto"
-                  style={{ maxHeight: '70vh', objectFit: 'contain' }}
+                  className={`h-auto photo-zoomable ${getModalPhotoClass(selectedPhoto.imageUrl)} ${isZoomed ? 'zoomed' : ''}`}
+                  style={{ 
+                    maxHeight: isZoomed ? 'none' : '70vh', 
+                    maxWidth: isZoomed ? 'none' : '100%', 
+                    objectFit: 'contain',
+                    cursor: isZoomed ? 'zoom-out' : 'zoom-in',
+                    transition: 'transform 0.3s ease',
+                    transform: isZoomed ? `scale(${getZoomScale(selectedPhoto.imageUrl)})` : 'scale(1)',
+                  }}
+                  onClick={handleZoomToggle}
                 />
 
                 {/* Next Arrow */}
@@ -128,11 +172,25 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos, categoryName }) => 
                   <i className="fas fa-chevron-right"></i>
                 </button>
 
-                {/* Photo Counter */}
-                <div className="position-absolute bottom-0 start-50 translate-middle-x mb-3">
-                  <span className="badge bg-dark bg-opacity-75 px-3 py-2">
+                {/* Zoom Toggle Button */}
+                <button
+                  className="btn btn-light position-absolute top-0 end-0 m-3 rounded-circle"
+                  style={{ zIndex: 10, width: '40px', height: '40px' }}
+                  onClick={handleZoomToggle}
+                >
+                  <i className={`fas ${isZoomed ? 'fa-compress' : 'fa-expand'}`}></i>
+                </button>
+
+                {/* Photo Counter and Zoom Hint */}
+                <div className="position-absolute bottom-0 start-50 translate-middle-x mb-3 text-center">
+                  <span className="badge bg-dark bg-opacity-75 px-3 py-2 mb-2 d-block">
                     {currentIndex + 1} of {photos.length}
                   </span>
+                  {!isZoomed && (
+                    <small className="text-white bg-dark bg-opacity-50 px-2 py-1 rounded d-block d-md-none">
+                      Tap image to zoom
+                    </small>
+                  )}
                 </div>
               </Col>
               
