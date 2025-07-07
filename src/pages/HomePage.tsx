@@ -18,15 +18,34 @@ const HomePage: React.FC = () => {
     <>
       <PageTitle title="Jose | Photography Portfolio" />
       <div className="container py-5">
-        {/* Hero Section with Rotating Collage */}
-        {/* <div className="row mb-5">
-          <div className="col-lg-8 mx-auto text-center mb-4">
-            <h1 className="display-4 mb-3">Jose Guillen</h1>
-            <p className="lead text-muted">
-              Photographer capturing life through different lenses.
-            </p>
+        {/* Hero Header Section */}
+        <div className="row mb-5">
+          <div className="col-12 text-center">
+            <div className="hero-header py-4">
+              {/* Option 1: Text-based Logo with Initials */}
+              <div className="logo-container mb-3">
+                <h1 className="display-3 fw-bold text-dark mb-2 initials-logo">JG</h1>
+              </div>
+              
+              {/* Option 2: Full Name Logo (uncomment to use instead) */}
+              {/* 
+              <div className="logo-container mb-3">
+                <h1 className="display-4 fw-light text-dark mb-2">Jose Guillen</h1>
+                <div className="logo-underline mx-auto"></div>
+              </div>
+              */}
+              
+              {/* Option 3: Image Logo (uncomment and add your logo file) */}
+              {/* 
+              <div className="logo-container mb-3">
+                <img src="/path-to-your-logo.png" alt="Jose Guillen Photography" className="logo-image" />
+              </div>
+              */}
+              
+              <h2 className="h4 text-muted fw-light">Photography Portfolio</h2>
+            </div>
           </div>
-        </div> */}
+        </div>
 
         {/* Rotating Image Collage */}
         {allPhotos.length > 0 && (
