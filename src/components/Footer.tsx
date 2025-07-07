@@ -122,9 +122,9 @@ const Footer: React.FC = () => {
                         <p className="copyright-text">
                             &copy; {currentYear()} Jose Guillen Photography. All rights reserved.
                         </p>
-                        <p className="footer-built">
+                        {/* <p className="footer-built">
                             Built with <span className="heart">❤</span> using React & TypeScript
-                        </p>
+                        </p> */}
                     </div>
                 </div>
             </div>
